@@ -10,6 +10,7 @@ const notamMinima = parseFloat(prompt("Digite a nota mínima: "));
 
 
 let linhas = '';
+
 form.addEventListener('submit', function(e){
     e.preventDefault();
     
@@ -33,7 +34,7 @@ function adicionaLinha( ){
         linha += `<td>${inputNomeAtividade.value}</td>`;
         linha += `<td>${inputNotaAtividade.value}</td>`;
         linha += `<td>${inputNotaAtividade.value >= notamMinima ? imgAprovado : imgReprovado}</td>`;
-        linha += '<t/d>';
+        linha += '</td>';
     
         linhas += linha;
     }
@@ -59,7 +60,7 @@ function atualizaMediaFinal(){
 function calculaMediaFinal(){
     let somaDasNotas = 0;
 
-    for(let i = 0 < notas.length; i++;) {
+    for(let i = 0; i < notas.length; i++) {
         somaDasNotas += notas[i];
     }
 
